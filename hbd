@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>陈诗妮 - 18岁生日快乐</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'SimSun', 'FangSong', serif;
+            color: #333;
+            background-color: white;
+        }
+        
+        section {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+        }
+        
+        /* 第一部分样式 */
+        #part1 {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+        }
+        
+        .image-placeholder {
+            width: 80%;
+            max-width: 2730px;
+            height: auto;
+            max-height: 1535px;
+            aspect-ratio: 2730 / 1535;
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px dashed #ccc;
+        }
+        
+        /* 第二部分样式 */
+        #part2 {
+            min-height: 100vh;
+            background-color: white;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .images-container {
+            height: 33vh;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        
+        .image-wrapper {
+            position: relative;
+            height: 100%;
+            display: flex;
+            align-items: center;
+        }
+        
+        .image1 {
+            width: 60%;
+            height: 100%;
+            background-color: #f0f0f0;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px dashed #ccc;
+        }
+        
+        .image2 {
+            width: 35%;
+            height: 100%;
+            background-color: #e8e8e8;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px dashed #ccc;
+        }
+        
+        .quote-left, .quote-right {
+            position: absolute;
+            font-size: 80px;
+            color: #666;
+            font-family: serif;
+        }
+        
+        .quote-left {
+            top: 10px;
+            left: 20px;
+        }
+        
+        .quote-right {
+            bottom: 10px;
+            right: 20px;
+        }
+        
+        .text-container {
+            flex: 1;
+            background-color: white;
+            padding: 30px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.05);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .text-content {
+            max-width: 800px;
+            line-height: 1.8;
+            font-size: 18px;
+            text-align: justify;
+        }
+        
+        /* 第三部分样式 */
+        #part3 {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+            position: relative;
+        }
+        
+        .video-background {
+            width: 100%;
+            height: 100%;
+            background-color: #f9f9f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px dashed #ccc;
+        }
+        
+        .video-container {
+            width: 33.33%;
+            height: 75%;
+            background-color: #ddd;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px dashed #999;
+        }
+        
+        .placeholder-text {
+            color: #666;
+            font-size: 18px;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .section-title {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: rgba(255,255,255,0.8);
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 14px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <!-- 第一部分 -->
+    <section id="part1">
+        <div class="image-placeholder">
+            <div class="placeholder-text">
+                请替换此区域为提供的2730x1535图片<br>
+                图片路径: images/part1-background.jpg
+            </div>
+        </div>
+    </section>
+    
+    <!-- 第二部分 -->
+    <section id="part2">
+        <div class="images-container">
+            <div class="image-wrapper">
+                <div class="image1">
+                    <div class="quote-left">"</div>
+                    <div class="placeholder-text">
+                        请替换此区域为图1 (3198x2256)<br>
+                        图片路径: images/part2-image1.jpg
+                    </div>
+                </div>
+            </div>
+            <div class="image-wrapper">
+                <div class="image2">
+                    <div class="placeholder-text">
+                        请替换此区域为图2 (1440x1080)<br>
+                        图片路径: images/part2-image2.jpg
+                    </div>
+                    <div class="quote-right">"</div>
+                </div>
+            </div>
+        </div>
+        <div class="text-container">
+            <div class="text-content">
+                <div class="placeholder-text">
+                    请在此处添加生日祝福文字<br>
+                    文字内容将由您提供
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- 第三部分 -->
+    <section id="part3">
+        <div class="video-background">
+            <div class="placeholder-text">
+                请替换此区域为背景图片<br>
+                图片路径: images/part3-background.jpg
+            </div>
+            <div class="video-container">
+                <div class="placeholder-text">
+                    请替换此区域为视频 (1280x720)<br>
+                    视频路径: videos/birthday-video.mp4
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
