@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>陈诗妮 - 18岁生日快乐</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: "FangSong", "仿宋", serif;
+            overflow-x: hidden;
+            color: #333;
+        }
+        
+        section {
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        /* 第一部分样式 */
+        .section-1 {
+            background-color: white;
+        }
+        
+        .section-1 img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        /* 第二部分样式 */
+        .section-2 {
+            background-color: white;
+            position: relative;
+        }
+        
+        .background-1 {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+        
+        .section-2-content {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .top-third {
+            height: 33.33%;
+            width: 100%;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .pic2-container {
+            width: 80%;
+            height: 90%;
+            position: relative;
+        }
+        
+        .pic2-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .quote-left {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 100px;
+            color: #333;
+            z-index: 3;
+        }
+        
+        .quote-right {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            font-size: 100px;
+            color: #333;
+            z-index: 3;
+        }
+        
+        .birthday-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin: 10px 0;
+            color: #333;
+            font-weight: bold;
+        }
+        
+        .message-container {
+            height: 66.67%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .message {
+            background-color: white;
+            padding: 30px;
+            width: 80%;
+            max-height: 90%;
+            overflow-y: auto;
+            line-height: 1.8;
+            font-size: 1.2rem;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 5px;
+        }
+        
+        /* 第三部分样式 */
+        .section-3 {
+            background-color: white;
+            position: relative;
+        }
+        
+        .background-2 {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+        
+        .video-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 60%;
+            max-width: 800px;
+            z-index: 2;
+            box-shadow: 0 0 20px rgba(0,0,0,0.3);
+        }
+        
+        .video-container video {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        /* 隐藏元素 */
+        .hidden {
+            display: none;
+        }
+        
+        /* 滚动提示 */
+        .scroll-hint {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #333;
+            font-size: 1.2rem;
+            text-align: center;
+            z-index: 10;
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0) translateX(-50%);
+            }
+            40% {
+                transform: translateY(-10px) translateX(-50%);
+            }
+            60% {
+                transform: translateY(-5px) translateX(-50%);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 第一部分 -->
+    <section class="section-1">
+        < img src="pic1.jpg" alt="生日庆祝图片">
+        <div class="scroll-hint">向下滚动继续</div>
+    </section>
+    
+    <!-- 第二部分 -->
+    <section class="section-2">
+        < img src="background1.jpg" alt="背景1" class="background-1">
+        <div class="section-2-content">
+            <div class="top-third">
+                <div class="pic2-container">
+                    <div class="quote-left">"</div>
+                    < img src="pic2.jpg" alt="图片2">
+                    <div class="quote-right">"</div>
+                </div>
+            </div>
+            <h1 class="birthday-title">Happy Birthday</h1>
+            <div class="message-container">
+                <div class="message">
+                    <p><strong>薯泥：</strong></p >
+                    <p>十八岁了。我想象这个数字落在你掌心，应是露水般的清凉，或是初雪融化时的微温？或许更像一枚刚刚成熟的浆果，在晨光里低垂，蕴着饱满的、颤巍巍的光。</p >
+                    <p>这一年多看你行走，总让我想起溪涧里的小石，被生活的水流反覆淘洗，渐渐露出温润的光泽。如今你立在十八岁的门槛，像一棵刚抽完新枝的树，风过来，每一片叶子都响着自己的声音。</p >
+                    <p>十八岁是什么呢？是法律开始认真对待你的意志，是远方的大学寄来一张薄而重的纸，是终于能正大光明地走进深夜的小酒馆，却在散场时感到一丝不知所措的自由。但我更愿说，十八岁是灵魂第一次清晰地听见自己的潮汐——哪一片海域适合扬帆，哪一处港湾必须告别。</p >
+                    <p>记得我们在太古仓的时光吗？ 电影散场后，江风把情节的余温吹成细碎的波光。我们沿着码头散步，涛声在脚下轻轻拍打着时光。你点燃仙女棒，那些迸裂的光屑——多像不肯安分的星辰，争先恐后要在人间驻足片刻。夜色裹着我们的笑语，而那些转瞬即逝的火花，却在记忆的暗房里曝光成永恒的底片。</p >
+                    <p>我想送你一段简媜的话："当上帝赐你荒野，意味着要你成为高飞的鹰。"往后的日子，必然有迷雾笼罩的隘口，有掌声如潮的舞台。无论何时，请听从心底最真实的节奏——如同山听从水的歌唱，云听从风的方向。</p >
+                    <p>且以茶代酒，敬你：</p >
+                    <p>愿你的善良带着锋芒，温柔保有脊梁。</p >
+                    <p>愿你的辛苦皆成养分，热闹皆为馈赠。</p >
+                    <p>愿你在成人的世界里，继续做一个不彻底的大人——为一朵花心动，为一句诗流泪，为值得的人傻气。</p >
+                    <p>生日快乐。</p >
+                    <p>愿十八岁的每一个晨昏，都铺成你通往星辰的阶梯。</p >
+                </div>
+            </div>
+        </div>
+        <div class="scroll-hint">向下滚动继续</div>
+    </section>
+    
+    <!-- 第三部分 -->
+    <section class="section-3">
+        < img src="background2.jpg" alt="背景2" class="background-2">
+        <div class="video-container">
+            <video id="birthday-video" controls>
+                <source src="video.mp4" type="video/mp4">
+                您的浏览器不支持视频播放。
+            </video>
+        </div>
+    </section>
+    
+    <!-- 音频元素 -->
+    <audio id="bgm" loop>
+        <source src="music.mp3" type="audio/mpeg">
+        您的浏览器不支持音频元素。
+    </audio>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const audio = document.getElementById('bgm');
+            const video = document.getElementById('birthday-video');
+            
+            // 尝试自动播放音频
+            const playAudio = () => {
+                audio.play().catch(e => {
+                    console.log('自动播放被阻止，需要用户交互');
+                });
+            };
+            
+            // 页面加载后尝试播放音频
+            playAudio();
+            
+            // 用户与页面交互时尝试播放音频
+            document.body.addEventListener('click', function() {
+                if (audio.paused) {
+                    playAudio();
+                }
+            }, { once: true });
+            
+            // 视频播放时暂停音频
+            video.addEventListener('play', function() {
+                audio.pause();
+            });
+            
+            // 视频结束时继续播放音频
+            video.addEventListener('ended', function() {
+                audio.play();
+            });
+            
+            // 平滑滚动到各部分
+            const sections = document.querySelectorAll('section');
+            let currentSection = 0;
+            
+            // 滚动提示点击事件
+            document.querySelectorAll('.scroll-hint').forEach(hint => {
+                hint.addEventListener('click', function() {
+                    currentSection = (currentSection + 1) % sections.length;
+                    sections[currentSection].scrollIntoView({ behavior: 'smooth' });
+                });
+            });
+            
+            // 键盘滚动支持
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'ArrowDown') {
+                    e.preventDefault();
+                    currentSection = Math.min(currentSection + 1, sections.length - 1);
+                    sections[currentSection].scrollIntoView({ behavior: 'smooth' });
+                } else if (e.key === 'ArrowUp') {
+                    e.preventDefault();
+                    currentSection = Math.max(currentSection - 1, 0);
+                    sections[currentSection].scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+            
+            // 触摸滑动支持
+            let startY = 0;
+            
+            document.addEventListener('touchstart', function(e) {
+                startY = e.touches[0].clientY;
+            });
+            
+            document.addEventListener('touchend', function(e) {
+                const endY = e.changedTouches[0].clientY;
+                const diff = startY - endY;
+                
+                if (Math.abs(diff) > 50) { // 最小滑动距离
+                    if (diff > 0) {
+                        // 向下滑动
+                        currentSection = Math.min(currentSection + 1, sections.length - 1);
+                    } else {
+                        // 向上滑动
+                        currentSection = Math.max(currentSection - 1, 0);
+                    }
+                    sections[currentSection].scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+</body>
+<<<<<<< HEAD
+</html>
+=======
+</html>
+>>>>>>> 33396b094cfdf0e27ad7b06a131072adb46473d6
