@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>陈诗妮 - 18岁生日快乐</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: "SimSun", "STSong", serif;
+            color: #333;
+            background-color: white;
+        }
+        
+        section {
+            width: 100%;
+            height: 100vh;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        /* 第一部分样式 */
+        .section-1 {
+            background: url('pic1.jpg') no-repeat center center;
+            background-size: cover;
+        }
+        
+        /* 第二部分样式 */
+        .section-2 {
+            background: url('background1.jpg') no-repeat center center;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+        }
+        
+        .birthday-title {
+            text-align: center;
+            font-size: 3rem;
+            margin: 40px 0 20px;
+            color: #333;
+        }
+        
+        .text-content {
+            flex: 1;
+            background-color: white;
+            padding: 30px;
+            overflow-y: auto;
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin: 0 20px 40px;
+        }
+        
+        /* 第三部分样式 */
+        .section-3 {
+            background: url('background2.jpg') no-repeat center center;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .video-container {
+            width: 60%;
+            max-width: 800px;
+            position: relative;
+        }
+        
+        .video-container video {
+            width: 100%;
+            height: auto;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        /* 隐藏的音频元素 */
+        #bgMusic {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- 背景音乐 -->
+    <audio id="bgMusic" loop>
+        <source src="music.mp3" type="audio/mpeg">
+        您的浏览器不支持音频元素。
+    </audio>
+    
+    <!-- 第一部分 -->
+    <section class="section-1"></section>
+    
+    <!-- 第二部分 -->
+    <section class="section-2">
+        <h1 class="birthday-title">Happy Birthday</h1>
+        
+        <div class="text-content">
+            <p>薯泥：</p >
+            <p>十八岁了。我想象这个数字落在你掌心，应是露水般的清凉，或是初雪融化时的微温？或许更像一枚刚刚成熟的浆果，在晨光里低垂，蕴着饱满的、颤巍巍的光。</p >
+            <p>这一年多看你行走，总让我想起溪涧里的小石，被生活的水流反覆淘洗，渐渐露出温润的光泽。如今你立在十八岁的门槛，像一棵刚抽完新枝的树，风过来，每一片叶子都响着自己的声音。</p >
+            <p>十八岁是什么呢？是法律开始认真对待你的意志，是远方的大学寄来一张薄而重的纸，是终于能正大光明地走进深夜的小酒馆，却在散场时感到一丝不知所措的自由。但我更愿说，十八岁是灵魂第一次清晰地听见自己的潮汐——哪一片海域适合扬帆，哪一处港湾必须告别。</p >
+            <p>记得我们在太古仓的时光吗？ 电影散场后，江风把情节的余温吹成细碎的波光。我们沿着码头散步，涛声在脚下轻轻拍打着时光。你点燃仙女棒，那些迸裂的光屑——多像不肯安分的星辰，争先恐后要在人间驻足片刻。夜色裹着我们的笑语，而那些转瞬即逝的火花，却在记忆的暗房里曝光成永恒的底片。</p >
+            <p>我想送你一段简媜的话："当上帝赐你荒野，意味着要你成为高飞的鹰。"往后的日子，必然有迷雾笼罩的隘口，有掌声如潮的舞台。无论何时，请听从心底最真实的节奏——如同山听从水的歌唱，云听从风的方向。</p >
+            <p>且以茶代酒，敬你：</p >
+            <p>愿你的善良带着锋芒，温柔保有脊梁。</p >
+            <p>愿你的辛苦皆成养分，热闹皆为馈赠。</p >
+            <p>愿你在成人的世界里，继续做一个不彻底的大人——为一朵花心动，为一句诗流泪，为值得的人傻气。</p >
+            <p>生日快乐。</p >
+            <p>愿十八岁的每一个晨昏，都铺成你通往星辰的阶梯。</p >
+        </div>
+    </section>
+    
+    <!-- 第三部分 -->
+    <section class="section-3">
+        <div class="video-container">
+            <video id="birthdayVideo" controls>
+                <source src="video.mp4" type="video/mp4">
+                您的浏览器不支持视频播放。
+            </video>
+        </div>
+    </section>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const bgMusic = document.getElementById('bgMusic');
+            const video = document.getElementById('birthdayVideo');
+            
+            // 尝试自动播放背景音乐
+            const playAudio = () => {
+                bgMusic.play().catch(error => {
+                    console.log("自动播放被阻止，需要用户交互");
+                    // 如果自动播放失败，添加一个点击事件监听器
+                    document.body.addEventListener('click', function startAudio() {
+                        bgMusic.play();
+                        document.body.removeEventListener('click', startAudio);
+                    });
+                });
+            };
+            
+            // 页面加载后尝试播放音频
+            playAudio();
+            
+            // 视频播放时暂停背景音乐
+            video.addEventListener('play', function() {
+                bgMusic.pause();
+            });
+            
+            // 视频结束时恢复背景音乐
+            video.addEventListener('ended', function() {
+                bgMusic.play();
+            });
+        });
+    </script>
+</body>
+</html>
